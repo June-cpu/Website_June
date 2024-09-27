@@ -38,13 +38,13 @@ main {
 
 .sections-container {
     display: flex;
-    justify-content: space-around; /* Adjust spacing between sections */
-    flex-wrap: wrap; /* Wrap sections to next line on small screens */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .section {
-    width: 30%; /* Adjust width of each section */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 30%;
+    box-sizing: border-box;
     margin: 10px;
     position: relative;
 }
@@ -76,11 +76,35 @@ main {
 
 @media (max-width: 768px) {
     .section {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%;
     }
 
     .sections-container {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .section h3 {
+        font-size: 1em;
+        padding: 3px;
+    }
+
+    .section {
+        width: 100%;
     }
 }
